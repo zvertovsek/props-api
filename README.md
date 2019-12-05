@@ -140,3 +140,38 @@ To [override the default config](https://eslint.org/docs/user-guide/configuring)
 ---
 
 This repo is maintained by [Anomaly Innovations](https://anoma.ly); makers of [Seed](https://seed.run) and [Serverless Stack](https://serverless-stack.com).
+
+
+
+Serverless: Stack update finished...
+Service Information
+service: props-api
+stage: prod
+region: eu-west-2
+stack: props-api-prod
+resources: 34
+api keys:
+  None
+endpoints:
+  POST - https://sy334thuy8.execute-api.eu-west-2.amazonaws.com/prod/properties
+  GET - https://sy334thuy8.execute-api.eu-west-2.amazonaws.com/prod/properties/{id}
+  GET - https://sy334thuy8.execute-api.eu-west-2.amazonaws.com/prod/properties
+  PUT - https://sy334thuy8.execute-api.eu-west-2.amazonaws.com/prod/properties/{id}
+  DELETE - https://sy334thuy8.execute-api.eu-west-2.amazonaws.com/prod/properties/{id}
+functions:
+  create: props-api-prod-create
+  get: props-api-prod-get
+  list: props-api-prod-list
+  update: props-api-prod-update
+  delete: props-api-prod-delete
+layers:
+  None
+Serverless: Run the "serverless" command to setup monitoring, troubleshooting and testing.
+
+
+
+Pool Id eu-west-2_10NX3gOap
+Pool ARN arn:aws:cognito-idp:eu-west-2:008478042292:userpool/eu-west-2_10NX3gOap
+
+client app: properties-app
+app client id: 60lshfuasog8gj75ni5sq2t8ec

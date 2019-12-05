@@ -2,10 +2,11 @@ import * as DB from './libs/dynamodb';
 import { failure, success } from './libs/response';
 
 export async function main(event, context) {
+    const data = JSON.parse(event.body);
     const params = {
         TableName: process.env.tableName,
         Key: {
-            userId: 'ziga',
+            userId: event.requestContext.identity.cognitoIdentityId,
             propertyId: event.pathParameters.id,
         },
         // 'UpdateExpression' defines the attributes to be updated
@@ -22,7 +23,7 @@ export async function main(event, context) {
     };
 
     try {
-        const result = await DB.call("update", params);
+        await DB.call("update", params);
         return success({ status: true });
     } catch (e) {
         return failure({ status: false });
